@@ -2,9 +2,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Cohete.js">
     <Files>
-      <File FileName="Assets\Scripts\Cohete.js" Line="32" Column="2" />
-      <File FileName="Assets\Scripts\toucher.js" Line="21" Column="13" />
-      <File FileName="Assets\Scripts\Level1.cs" Line="11" Column="36" />
+      <File FileName="Assets\Scripts\toucher.js" Line="22" Column="42" />
+      <File FileName="Assets\Scripts\Cohete.js" Line="18" Column="24" />
+      <File FileName="Assets\Scripts\Level1.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

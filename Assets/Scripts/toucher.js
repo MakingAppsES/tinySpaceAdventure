@@ -20,6 +20,7 @@ function Update () {
     	}
 	    else {
 	    	sistemaParticulas.emissionRate = 7;
+			cohete.rigidbody.velocity.y = -3.13; // Gravedad constante simulada
 	    }
     }
 }

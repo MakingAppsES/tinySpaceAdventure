@@ -8,9 +8,6 @@ var smooth: float = 0; // Suavidad de cambio
 var GetAxisH: float = 0;
 var GetAxisV: float = 0;
 
-var pinchado:boolean = false;
-var dir:int;
-
 function estaFuera (){
 	if (transform.position.x < 0 || transform.position.x > 100 ||
 		transform.position.y < 0 || transform.position.y > 60 ) {
@@ -28,8 +25,8 @@ function Start () {
 }
 
 function OnCollisionEnter(collision : Collision) {
+	if(collision.gameObject.tag != 'Meta')
 		Application.LoadLevel("mainmenu");
-		print(collision.gameObject.tag);
 }
     
 function Update () { 
@@ -38,7 +35,7 @@ function Update () {
 	GetAxisH = Mathf.Clamp(acel.x * sensH, -1, 1);
 
 	transform.Translate(GetAxisH,0,0);
-	transform.Translate(0,-0.05,0);
+	//transform.Translate(0,-0.05,0);
 	
 	if(estaFuera()){
 		Application.LoadLevel("mainmenu");
