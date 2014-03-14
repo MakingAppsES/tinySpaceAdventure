@@ -33,6 +33,10 @@ function Start () {
 
 function OnCollisionEnter(collision : Collision) {
 		Debug.Log("Cohete-collision");
+		if(collision.gameObject.tag=="Meta"){
+			print("WoW");
+		}
+		else
 		Application.LoadLevel("mainmenu");
 }
     
