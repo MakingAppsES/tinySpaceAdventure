@@ -22,7 +22,7 @@ public class MainMenu : MonoBehaviour {
 		int b_width = 200;
 		int b_height = 50;
 		
-		if(GUI.Button(new Rect ((s_width-b_width)/2,(s_height)/2,b_width,b_height), "Scene 1")){
+		if(GUI.Button(new Rect ((s_width-b_width)/2,(s_height)/2,b_width,b_height), "Level 1")){
 			Application.LoadLevel("level1");
 		}
 		/*if(GUI.Button(new Rect ((s_width-b_width)/2,(s_height)/2+b_height+10,b_width,b_height), "Scene 2")){
