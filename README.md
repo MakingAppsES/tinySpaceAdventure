@@ -4,6 +4,8 @@ provides a few examples about smartphone-oriented programming with Unity3D.
 Nowadays, the application includes:
 - The use of the **tilt sensor**
 - **Touching** GameObjects
-- The use of **GUI.button**s
+- The use of **GUI Elements**
+- Transitions between **Scenes**
+- **Collision** management
 
 and many others.
