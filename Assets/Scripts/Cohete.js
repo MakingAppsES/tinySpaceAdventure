@@ -25,7 +25,9 @@ function Start () {
 }
 
 function OnCollisionEnter(collision : Collision) {
-	if(collision.gameObject.tag != 'Meta')
+	if(collision.gameObject.tag == 'Meta')
+		gameObject.Find("Administrador").GetComponent(Level).finished = true;
+	else
 		Application.LoadLevel("mainmenu");
 }
     
