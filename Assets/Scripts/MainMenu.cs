@@ -5,6 +5,7 @@ public class MainMenu : MonoBehaviour {
 	
 	public static int s_width;
 	public static int s_height;
+	public Texture2D tittleImg;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +22,10 @@ public class MainMenu : MonoBehaviour {
 	void OnGUI () {
 		int b_width = 200;
 		int b_height = 50;
-		
+
+		GUI.Label (new Rect ((s_width-tittleImg.width+50)/2,(s_height)/5,tittleImg.width,tittleImg.height), 
+		           tittleImg);
+
 		if(GUI.Button(new Rect ((s_width-b_width)/2,(s_height)/2,b_width,b_height), "Level 1")){
 			Application.LoadLevel("level1");
 		}
