@@ -20,10 +20,10 @@ public class MainMenu : MonoBehaviour {
 	}
 	
 	void OnGUI () {
-		int b_width = 200;
-		int b_height = 50;
-
-		GUI.Label (new Rect ((s_width-tittleImg.width+50)/2,(s_height)/5,tittleImg.width,tittleImg.height), 
+		int b_width = 200; // Button width
+		int b_height = 50; // Button height
+		
+		GUI.DrawTexture (new Rect ((s_width-tittleImg.width)/2,(s_height)/5,tittleImg.width,tittleImg.height), 
 		           tittleImg);
 
 		if(GUI.Button(new Rect ((s_width-b_width)/2,(s_height)/2,b_width,b_height), "Level 1")){
