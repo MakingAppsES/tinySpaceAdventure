@@ -4,6 +4,7 @@ var s_w : int ;
 var s_h : int ;
 var finished : boolean;
 var pausa : boolean;
+var nivel : int; // Nivel en el que estamos (se asigna en la escena)
 
 function pauseGame() {
 	var objects = FindObjectsOfType (typeof(GameObject));
@@ -40,6 +41,7 @@ function OnGUI () {
 	if (finished) {
 		GUI.Box (Rect (s_w/4,s_h/4,s_w/2,s_h/2), "Nivel terminado");
 		pauseGame();
+		UserPrefs.nivelAlcanzado = nivel; // Ponemos el nivel alcanzado
 		//Time.timeScale = 0.0;
 		if(GUI.Button(new Rect ((s_w-s_w/4)/2,(s_h)/2,s_w/4,50), "Menu")){
 		//	Time.timeScale = 1.0;

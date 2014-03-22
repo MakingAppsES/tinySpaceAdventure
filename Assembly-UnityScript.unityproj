@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Cohete.js" />
      <Compile Include="Assets\Scripts\Level.js" />
+     <Compile Include="Assets\Scripts\UserPrefs.js" />
      <Compile Include="Assets\Scripts\toucher.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
