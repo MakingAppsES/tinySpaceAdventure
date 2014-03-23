@@ -6,8 +6,16 @@ The objetive of the game is to land a spaceship in a special platform. The playe
 Nowadays, the application includes:
 - The use of the **tilt sensor**
 - **Touching** GameObjects
+- Particle Systems
 - The use of **GUI Elements**
+  - ```GUI.Button```
+  - ```GUI.Label```
+  - ```GUI.DrawTexture```
+  - ```GUI.Box```
 - Transitions between **Scenes**
 - **Collision** management
+- **PlayerPrefs** to store game data
 
 and many others.
+
+You can find tutorials related to these things in our [blog](http://www.makingapps.es/tag/unity3d/)
