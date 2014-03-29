@@ -3,8 +3,10 @@
 var s_w : int ;
 var s_h : int ;
 var finished : boolean;
+var failed : boolean;
 var pausa : boolean;
 var nivel : int; // Nivel en el que estamos (se asigna en la escena)
+private var exitTimer : float;
 
 function pauseGame() {
 	var objects = FindObjectsOfType (typeof(GameObject));
@@ -25,7 +27,9 @@ function Start () {
 	//Time.timeScale = 1.0;
 	
 	finished = false;
+	failed = false;
 	pausa = false;
+	exitTimer = 1.0;
 	s_w = Screen.width;
 	s_h = Screen.height;
 }
@@ -46,6 +50,12 @@ function OnGUI () {
 		if(GUI.Button(new Rect ((s_w-s_w/4)/2,(s_h)/2,s_w/4,50), "Menu")){
 		//	Time.timeScale = 1.0;
 			resumeGame();
+			Application.LoadLevel("mainmenu");
+		}
+	}
+	else if (failed) {
+		exitTimer -= Time.deltaTime;
+		if(exitTimer<=0) {
 			Application.LoadLevel("mainmenu");
 		}
 	}

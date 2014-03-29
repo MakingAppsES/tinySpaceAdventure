@@ -8,6 +8,8 @@ var smooth: float = 0; // Suavidad de cambio
 var GetAxisH: float = 0;
 var GetAxisV: float = 0;
 var paused : boolean = false;
+var explosionPf : GameObject; // Prefab de la explosion
+
 /**
  * Evalua si el cohete esta fuera de la zona de juego
  */
@@ -47,11 +49,19 @@ function OnResumeGame () {
 	paused = false;
 }
 
+/**
+ *	Funcion llamada cuando el cohete choca con algo
+ */
 function OnCollisionEnter(collision : Collision) {
 	if(collision.gameObject.tag == 'Meta')
 		gameObject.Find("Administrador").GetComponent(Level).finished = true;
-	else
-		Application.LoadLevel("mainmenu");
+	else {
+		gameObject.Find("Administrador").GetComponent(Level).failed = true;
+		var contact : Vector3 = collision.contacts[0].point;
+		var expl : GameObject = Instantiate (explosionPf, contact-Vector3(0,0,10), Quaternion.identity);
+		
+		//Application.LoadLevel("mainmenu");
+	}
 }
     
 function Update () { 
